@@ -44,6 +44,9 @@ We also include binary masks of the flood (water segmentation) for the *after* i
 ## Usage 
 The dataset can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1aU6f-El0Sps7iBMMekEePzzqDXNmwAiv?usp=sharing).
 
+## Dataset File Structure
+**Placeholder**
+
 ## References
 If you use MILA Simulated Floods Dataset please cite the related paper:
 ```
