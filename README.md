@@ -109,6 +109,70 @@ Mila-Simulated-flood-19800-high
             │   ...
 ```
 
+```
+Mila-Simulated-flood-19800-low
+└───Mila-Simulated-flood
+    └───Unity-19800-low
+        └───Depth
+            │   0001_low.png
+            │   0001_0_low.png
+            │   0001_1_low.png
+            │   ...
+            │   0001_9_low.png
+            │   0002_low.png
+            │   0002_0_low.png
+            │   0002_1_low.png
+            │   ...
+        └───Flood
+            │   0001_low.png
+            │   0001_0_low.png
+            │   0001_1_low.png
+            │   ...
+            │   0001_9_low.png
+            │   0002_low.png
+            │   0002_0_low.png
+            │   0002_1_low.png
+            │   ...
+        └───JSON
+            │   0001_low.json
+            │   0001_0_low.json
+            │   0001_1_low.json
+            │   ...
+            │   0001_9_low.json
+            │   0002_low.json
+            │   0002_0_low.json
+            │   0002_1_low.json
+            │   ...
+        └───Mask
+            │   0001_low.png
+            │   0001_0_low.png
+            │   0001_1_low.png
+            │   ...
+            │   0001_9_low.png
+            │   0002_low.png
+            │   0002_0_low.png
+            │   0002_1_low.png
+            │   ...
+        └───Normal
+            │   0001_low.png
+            │   0001_0_low.png
+            │   0001_1_low.png
+            │   ...
+            │   0001_9_low.png
+            │   0002_low.png
+            │   0002_0_low.png
+            │   0002_1_low.png
+            │   ...
+        └───Segmentation
+            │   0001_low.png
+            │   0001w_low.png
+            │   0001_0_low.png
+            |   0001_0w_low.png
+            │   0001_1_low.png
+            |   0001_1w_low.png
+            │   ...
+```
+
 ## References
 If you use MILA Simulated Floods Dataset please cite the related paper:
 ```
