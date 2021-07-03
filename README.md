@@ -45,7 +45,69 @@ We also include binary masks of the flood (water segmentation) for the *after* i
 The dataset can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1aU6f-El0Sps7iBMMekEePzzqDXNmwAiv?usp=sharing).
 
 ## Dataset File Structure
-**Placeholder**
+```
+Mila-Simulated-flood-19800-high
+└───Mila-Simulated-flood
+    └───Unity-19800-high
+        └───Depth
+            │   0001_high.png
+            │   0001_0_high.png
+            │   0001_1_high.png
+            │   ...
+            │   0001_9_high.png
+            │   0002_high.png
+            │   0002_0_high.png
+            │   0002_1_high.png
+            │   ...
+        └───Flood
+            │   0001_high.png
+            │   0001_0_high.png
+            │   0001_1_high.png
+            │   ...
+            │   0001_9_high.png
+            │   0002_high.png
+            │   0002_0_high.png
+            │   0002_1_high.png
+            │   ...
+        └───JSON
+            │   0001_high.json
+            │   0001_0_high_high.json
+            │   0001_1_high_high.json
+            │   ...
+            │   0001_9_high_high.json
+            │   0002_high.json
+            │   0002_0_high_high.json
+            │   0002_1_high_high.json
+            │   ...
+        └───Mask
+            │   0001_high.png
+            │   0001_0_high.png
+            │   0001_1_high.png
+            │   ...
+            │   0001_9_high.png
+            │   0002_high.png
+            │   0002_0_high.png
+            │   0002_1_high.png
+            │   ...
+        └───Normal
+            │   0001_high.png
+            │   0001_0_high.png
+            │   0001_1_high.png
+            │   ...
+            │   0001_9_high.png
+            │   0002_high.png
+            │   0002_0_high.png
+            │   0002_1_high.png
+            │   ...
+        └───Segmentation
+            │   0001_high.png
+            │   0001w_high.png
+            │   0001_0_high.png
+            |   0001_0w_high_high.png
+            │   0001_1_high.png
+            |   0001_1w_high_high.png
+            │   ...
+```
 
 ## References
 If you use MILA Simulated Floods Dataset please cite the related paper:
