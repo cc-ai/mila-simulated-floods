@@ -215,7 +215,7 @@ The following table provides the correspondence between classes and colors:
 |Car| This includes only cars | [255, 0, 0, 255] | 13
 |Trees| Some trees are seen as 2D in Unity and not segmented |  [60, 180, 60, 255]
 |Truck| Vehicle with greater dimensions  than car (fixed threshold TBD) | |  14, 15, 16
-|Person| Not in the dataset for now| | 11, 12
+|Person| Not in the dataset | | 11, 12
 
  <!--- Note: figure out the Tree labels, since this may introduce noise in the training --->
 Even though some categories are not yet included in the simulated dataset, we choose specific colors to represent them in order to convert segmentation maps obtained with 19-class cityscapes to our simulated dataset labels. 
