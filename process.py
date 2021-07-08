@@ -25,6 +25,7 @@ def load_unity_depth(unity_depth_path, far=1000):
     """Transforms the 3-channel encoded depth map from our Unity simulator
     to 1-channel depth map containing metric depth values.
     The depth is encoded in the following way:
+
     - The information from the simulator is (1 - LinearDepth (in [0,1])).
         far corresponds to the furthest distance to the camera included in the
         depth map.
@@ -33,6 +34,7 @@ def load_unity_depth(unity_depth_path, far=1000):
         from 0 to 247
     - each slice is divided again in 31 slices, whose value is encoded in G channel
     - each of the G slices is divided into 256 slices, encoded in B channel
+
 
     In total, we have a discretization of depth into N = 31*31*256 - 1 possible values,
     covering a range of far/N meters.
@@ -43,8 +45,11 @@ def load_unity_depth(unity_depth_path, far=1000):
     The metric distance associated to a pixel whose depth is (R,G,B) is :
         d = (far/N) * [((255 - R)//8)*256*31 + ((255 - G)//8)*256 + (255 - B)]
 
+
+
     Args:
-        unity_depth_tensor (torch.Tensor): one depth map obtained from our simulator
+        unity_depth_path (str or pathlib.Path): Path to a single depth map from the
+            dataset
         far (int, optional): [description]. Defaults to 1000.
 
     Returns:
@@ -70,22 +75,23 @@ def load_unity_depth(unity_depth_path, far=1000):
     return metric_depth
 
 
-def load_unity_segmap(unity_seg_path):
-    """Change a segmentation RGBA array to a segmentation array
-                            with each pixel being the index of the class
-    Arguments:
-        numpy array -- segmented image of size (H) x (W) x (4 RGBA values)
+def load_unity_segmap(unity_seg_path, default_value=10):
+    """Load a segmentation RGBA image to a segmentation array with each
+    pixel being the index of the class
+
+    Args:
+        unity_seg_path (str or pathlib.Path): path to a segmentation RGBA image
+            from the dataset
+        default_value (int, optional): Class index for everything but known items.
+            Defaults to 10.
+
     Returns:
-        numpy array of size (1) x (H) x (W) with each pixel being the index of the class
+        numpy.array: array of size (1) x (H) x (W) with each pixel being the index
+            of the class
     """
     seg_image = imread(unity_seg_path)
-    seg_class_arr = np.zeros((1, seg_image.shape[0], seg_image.shape[1]))
+    out = np.ones((seg_image.shape[0], seg_image.shape[1])) * default_value
+    for class_id, rgba_value in SEG_CLASS_TO_RGBA.items():
+        out[np.where((seg_image == rgba_value).all(-1))] = class_id
 
-    for i in range(seg_image.shape[0]):
-        for j in range(seg_image.shape[1]):
-            pixel_rgba = tuple(seg_image[i, j, :])
-            if pixel_rgba in RGBA_TO_SEG_CLASS.keys():
-                seg_class_arr[0, i, j] = RGBA_TO_SEG_CLASS[pixel_rgba]
-            else:
-                raise ValueError(f"Unknown RGBA value {pixel_rgba}")
-    return seg_class_arr
+    return out[None, ...]
