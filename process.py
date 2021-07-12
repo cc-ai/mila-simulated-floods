@@ -90,6 +90,8 @@ def load_unity_segmap(unity_seg_path, default_value=10):
             of the class
     """
     seg_image = imread(unity_seg_path)
+    pixel_values = np.unique(np.reshape(seg_image, (-1, seg_image.shape[-1])), axis=0)
+    assert all(tuple(p) in RGBA_TO_SEG_CLASS for p in pixel_values)
     out = np.ones((seg_image.shape[0], seg_image.shape[1])) * default_value
     for class_id, rgba_value in SEG_CLASS_TO_RGBA.items():
         out[np.where((seg_image == rgba_value).all(-1))] = class_id
