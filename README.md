@@ -213,7 +213,7 @@ The following table provides the correspondence between classes and colors:
 | Terrain       | Grass, all kinds of horizontal vegetation, soil, sand           | [255, 97, 0, 255]  | 9                     |
 | Sky           | Open sky                                                        | [0, 0, 0, 255]     | 10                    |
 | Car           | This includes only cars                                         | [255, 0, 0, 255]   | 13                    |
-| Trees         | Some trees are seen as 2D in Unity and not segmented            | [60, 180, 60, 255] |
+| Trees         | Some trees are seen as 2D in Unity and not segmented            | [0, 0, 0, 0]       |
 | Truck         | Vehicle with greater dimensions  than car                       |                    | 14, 15, 16            |
 | Person        | Not in the dataset                                              |                    | 11, 12                |
 
