@@ -50,7 +50,7 @@ We also include binary masks of the flood (water segmentation) for the *after* i
 
 ## Usage
 
-The dataset can be **downloaded from [Google Drive](https://drive.google.com/drive/folders/1aU6f-El0Sps7iBMMekEePzzqDXNmwAiv?usp=sharing)** (checkout [`gdown`](https://github.com/wkentaro/gdown) for a commandline interface).
+The dataset can be **downloaded from [Google Drive](https://drive.google.com/drive/folders/1aU6f-El0Sps7iBMMekEePzzqDXNmwAiv?usp=sharing)** (checkout [`gdown`](https://github.com/wkentaro/gdown) for a command-line interface).
 
 ## Dataset File Structure
 
