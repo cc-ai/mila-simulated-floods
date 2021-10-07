@@ -250,14 +250,11 @@ The json files contain the following information:
 If you use the Mila Simulated Floods Dataset please cite the related paper:
 
 ```
-@article{xxx,
-  title={xxx},
-  author={xxx},
-  journal={arxiv},
-  year={2021}
+@article{schmidt2021climategan,
+    title={ClimateGAN: Raising Climate Change Awareness by Generating Images of
+  Floods},
+    author={Victor Schmidt and Alexandra Sasha Luccioni and Mélisande Teng and Tianyu Zhang and Alexia Reynaud and Sunand Raghupathi and Gautier Cosne and Adrien Juraver and Vahe Vardanyan and Alex Hernandez-Garcia and Yoshua Bengio},
+    year={2021},
+    journal={arXiv preprint arXiv:2110.02871}
 }
 ```
-
-## Credits
-
-**Placeholder**
